@@ -1,0 +1,26 @@
+2017 Roman G. Bragin (roman.bragin.kn@gmail.com)
+yard-measure
+The sample was taken from http://webmap-blog.ru/bez-rubriki/risuem-poliliniyu-na-karte-i-opredelyaem-ee-dlinu-ispolzuya-api-google-maps-v3
+
+To run, you need to:
+
+1.Add a line to the html header. For example:
+<head>
+....
+<script type="text/javascript" src="measure_map.js"></script>
+....
+</head>
+
+2.The block in which the map will be assigned id="main_m". For example:
+<div id="main_m">
+      <div id='map'></div>
+</div>
+
+3.After the map is initialized, run the ruler:
+var map = new google.maps.Map(mapCanvas,mapOptions);//Your map
+
+measure_map = map;
+google.maps.event.addListener(map, "click", mapLeftClick);
+initPolyline();
+
+Good luck!
